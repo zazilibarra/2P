@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'HomeController@inicio');
+
+Route::get('/form', function()
+{
+    return view('form');
 });
+
+Route::post('/guarda', 'HomeController@guarda');
+
+Route::get('/detalle/{id}', 'HomeController@detalle');
+
+Route::get('/detallepastel/{id}', 'HomeController@detallePastel');
