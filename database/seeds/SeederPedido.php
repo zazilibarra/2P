@@ -4,13 +4,19 @@ use Illuminate\Database\Seeder;
 
 class SeederPedido extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
-        //
+        DB::table('pedido')->insert([
+            'idcliente' => 1,
+            'total' => 240
+        ]);
+        DB::table('pedido')->insert([
+            'idcliente' => 2,
+            'total' => 140
+        ]);
+        DB::table('pedido')->insert([
+            'idcliente' => 1,
+            'total' => 200
+        ]);
     }
 }
